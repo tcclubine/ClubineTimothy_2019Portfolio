@@ -1,0 +1,15 @@
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\ClubineTimothy_dbsreview.exe.config
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\ClubineTimothy_dbsreview.exe
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\ClubineTimothy_dbsreview.pdb
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\Google.Protobuf.dll
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\MySql.Data.dll
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\Renci.SshNet.dll
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\Google.Protobuf.xml
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\MySql.Data.xml
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\bin\Debug\Renci.SshNet.xml
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\obj\Debug\ClubineTimothy_dbsreview.csprojAssemblyReference.cache
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\obj\Debug\ClubineTimothy_dbsreview.csproj.CoreCompileInputs.cache
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\obj\Debug\ClubineTimothy_dbsreview.csproj.CopyComplete
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\obj\Debug\ClubineTimothy_dbsreview.exe
+C:\Users\tclub\Documents\FullSail\ClubineTimothy_2019Portfolio\ClubineTimothy_dbsreview\ClubineTimothy_dbsreview\obj\Debug\ClubineTimothy_dbsreview.pdb

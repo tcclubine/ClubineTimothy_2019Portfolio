@@ -99,7 +99,23 @@ namespace ClubineTimothy_dbsreview
 
         public void AddWeather(string stm)
         {
-
+                       
+            
+            try
+            {
+                
+                MySqlCommand cmd = new MySqlCommand(stm,_conn);
+                cmd.CommandText = stm;
+                cmd.ExecuteNonQuery();
+                    
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                Console.ReadKey();
+            }
+            
+                
         }
     }
 }

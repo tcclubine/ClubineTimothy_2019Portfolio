@@ -50,15 +50,17 @@ namespace ClubineTimothy_dbsreview
                     Console.WriteLine($"\r\nNo Data available for {input}.");
                 }
 
-                /*Google the current weather in Orlando. Write and execute an SQL statement to add Orlando and the associated fields to the weather table. 
-                 ** You may NOT need the provided php file depending on how you connect.*/
-
-                // Run your program again and query the weather for Orlando.
+                
 
                 /*To complete this assignment, submit a screen shot of the programming functioning for the city Dallas, Berlin, and Orlando.*/
             } while (ValidateBool("Would you like to view another city? (y/n): "));
-            
-            
+            /*Once your program is running: 
+                 ** Google the current weather in Orlando. Write and execute an SQL statement to add Orlando and the associated fields to the weather table. 
+                 ** You may NOT need the provided php file depending on how you connect.*/
+            string stm2 = "INSERT INTO weather (createdDate,weather.city, description,temp,pressure,humidity,temp_min,temp_max,windSpeed,windDeg,country,cityId,resultJson) VALUES(NOW(), \"Orlando\", \"Sunny\", 302.039, 29.92, 58, 72, 88, 14, NULL, \"US\", 3897, null); ";
+            dbs.AddWeather(stm2);
+            // Run your program again and query the weather for Orlando.
+
             dbs.CloseConnection();
             Console.WriteLine("End of Program.");
         }

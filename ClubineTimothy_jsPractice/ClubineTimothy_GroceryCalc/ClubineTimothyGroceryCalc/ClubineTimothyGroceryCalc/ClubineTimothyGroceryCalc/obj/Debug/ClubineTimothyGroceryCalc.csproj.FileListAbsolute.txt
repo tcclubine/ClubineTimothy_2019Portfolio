@@ -1,0 +1,7 @@
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyGroceryCalc\ClubineTimothyGroceryCalc\bin\Debug\ClubineTimothyGroceryCalc.exe.config
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyGroceryCalc\ClubineTimothyGroceryCalc\bin\Debug\ClubineTimothyGroceryCalc.exe
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyGroceryCalc\ClubineTimothyGroceryCalc\bin\Debug\ClubineTimothyGroceryCalc.pdb
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyGroceryCalc\ClubineTimothyGroceryCalc\obj\Debug\ClubineTimothyGroceryCalc.csprojAssemblyReference.cache
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyGroceryCalc\ClubineTimothyGroceryCalc\obj\Debug\ClubineTimothyGroceryCalc.csproj.CoreCompileInputs.cache
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyGroceryCalc\ClubineTimothyGroceryCalc\obj\Debug\ClubineTimothyGroceryCalc.exe
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyGroceryCalc\ClubineTimothyGroceryCalc\obj\Debug\ClubineTimothyGroceryCalc.pdb

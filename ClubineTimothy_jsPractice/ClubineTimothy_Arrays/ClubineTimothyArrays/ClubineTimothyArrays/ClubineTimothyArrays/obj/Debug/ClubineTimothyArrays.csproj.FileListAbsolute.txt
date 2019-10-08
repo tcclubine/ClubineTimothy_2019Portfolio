@@ -1,0 +1,7 @@
+C:\Users\tclub\source\repos\ClubineTimothyArrays\ClubineTimothyArrays\bin\Debug\ClubineTimothyArrays.exe.config
+C:\Users\tclub\source\repos\ClubineTimothyArrays\ClubineTimothyArrays\bin\Debug\ClubineTimothyArrays.exe
+C:\Users\tclub\source\repos\ClubineTimothyArrays\ClubineTimothyArrays\bin\Debug\ClubineTimothyArrays.pdb
+C:\Users\tclub\source\repos\ClubineTimothyArrays\ClubineTimothyArrays\obj\Debug\ClubineTimothyArrays.csprojAssemblyReference.cache
+C:\Users\tclub\source\repos\ClubineTimothyArrays\ClubineTimothyArrays\obj\Debug\ClubineTimothyArrays.csproj.CoreCompileInputs.cache
+C:\Users\tclub\source\repos\ClubineTimothyArrays\ClubineTimothyArrays\obj\Debug\ClubineTimothyArrays.exe
+C:\Users\tclub\source\repos\ClubineTimothyArrays\ClubineTimothyArrays\obj\Debug\ClubineTimothyArrays.pdb

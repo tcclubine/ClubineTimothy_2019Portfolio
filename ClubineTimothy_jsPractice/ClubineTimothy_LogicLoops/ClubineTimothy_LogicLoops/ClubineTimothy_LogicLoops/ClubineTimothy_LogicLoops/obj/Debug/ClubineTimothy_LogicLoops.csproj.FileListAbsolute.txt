@@ -1,0 +1,7 @@
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothy_LogicLoops\ClubineTimothy_LogicLoops\bin\Debug\ClubineTimothy_LogicLoops.exe.config
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothy_LogicLoops\ClubineTimothy_LogicLoops\bin\Debug\ClubineTimothy_LogicLoops.exe
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothy_LogicLoops\ClubineTimothy_LogicLoops\bin\Debug\ClubineTimothy_LogicLoops.pdb
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothy_LogicLoops\ClubineTimothy_LogicLoops\obj\Debug\ClubineTimothy_LogicLoops.csprojAssemblyReference.cache
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothy_LogicLoops\ClubineTimothy_LogicLoops\obj\Debug\ClubineTimothy_LogicLoops.csproj.CoreCompileInputs.cache
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothy_LogicLoops\ClubineTimothy_LogicLoops\obj\Debug\ClubineTimothy_LogicLoops.exe
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothy_LogicLoops\ClubineTimothy_LogicLoops\obj\Debug\ClubineTimothy_LogicLoops.pdb

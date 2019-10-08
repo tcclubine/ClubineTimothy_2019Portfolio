@@ -1,0 +1,7 @@
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothyConditionals\ClubineTimothyConditionals\obj\Debug\ClubineTimothyConditionals.csprojAssemblyReference.cache
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothyConditionals\ClubineTimothyConditionals\obj\Debug\ClubineTimothyConditionals.csproj.CoreCompileInputs.cache
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothyConditionals\ClubineTimothyConditionals\bin\Debug\ClubineTimothyConditionals.exe.config
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothyConditionals\ClubineTimothyConditionals\bin\Debug\ClubineTimothyConditionals.exe
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothyConditionals\ClubineTimothyConditionals\bin\Debug\ClubineTimothyConditionals.pdb
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothyConditionals\ClubineTimothyConditionals\obj\Debug\ClubineTimothyConditionals.exe
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\Assignments\ClubineTimothyConditionals\ClubineTimothyConditionals\obj\Debug\ClubineTimothyConditionals.pdb

@@ -1,0 +1,7 @@
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyMadLibs\ClubineTimothyMadLibs\bin\Debug\ClubineTimothyMadLibs.exe.config
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyMadLibs\ClubineTimothyMadLibs\bin\Debug\ClubineTimothyMadLibs.exe
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyMadLibs\ClubineTimothyMadLibs\bin\Debug\ClubineTimothyMadLibs.pdb
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyMadLibs\ClubineTimothyMadLibs\obj\Debug\ClubineTimothyMadLibs.csprojAssemblyReference.cache
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyMadLibs\ClubineTimothyMadLibs\obj\Debug\ClubineTimothyMadLibs.csproj.CoreCompileInputs.cache
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyMadLibs\ClubineTimothyMadLibs\obj\Debug\ClubineTimothyMadLibs.exe
+C:\Users\tclub\OneDrive\Documents\Full Sail\SDI\C#\ClubineTimothyMadLibs\ClubineTimothyMadLibs\obj\Debug\ClubineTimothyMadLibs.pdb

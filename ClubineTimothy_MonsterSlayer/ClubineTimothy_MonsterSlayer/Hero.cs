@@ -19,7 +19,7 @@ namespace ClubineTimothy_MonsterSlayer
         public int Health { get { return mHealth; }  }
         public int Attack { get { return mAttack; }  }
         public int Armor { get { return mArmor; }  }        
-        public List<Monster> Monsters { get { return mMonsterList; } }
+        public List<Monster> Monsters { get { return mMonsterList; } set { mMonsterList = value; } }
 
         public Hero(string name, int health, int attack, int armor)
         {

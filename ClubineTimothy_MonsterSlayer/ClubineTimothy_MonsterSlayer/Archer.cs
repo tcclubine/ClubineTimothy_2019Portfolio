@@ -8,8 +8,8 @@ namespace ClubineTimothy_MonsterSlayer
 {
     class Archer : Hero, IStatusChange
     {
-        bool mStatus;
-
+        private bool mStatus;
+        public bool Status { get { return mStatus; } }
         public Archer(string name, int health, int attack, int armor) : base(name, health, attack, armor)
         {
             mStatus = true;

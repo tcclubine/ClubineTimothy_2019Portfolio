@@ -8,6 +8,12 @@ namespace ClubineTimothy_MonsterSlayer
 {
     class JSON
     {
+        public JSON() { }
 
+        public void Save() { }
+
+        public void Load() { }
+
+        
     }
 }

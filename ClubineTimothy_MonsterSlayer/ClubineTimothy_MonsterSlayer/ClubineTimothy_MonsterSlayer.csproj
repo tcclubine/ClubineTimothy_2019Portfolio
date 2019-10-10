@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Archer.cs" />
     <Compile Include="Hero.cs" />
+    <Compile Include="JSON.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -8,7 +8,8 @@ namespace ClubineTimothy_MonsterSlayer
 {
     class Wizard : Hero, IStatusChange
     {
-        bool mStatus;
+        private bool mStatus;
+        public bool Status { get { return mStatus; } }
 
         public Wizard(string name, int health, int attack, int armor) : base(name, health, attack, armor)
         {

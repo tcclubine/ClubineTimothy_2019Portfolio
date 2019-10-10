@@ -18,8 +18,7 @@ namespace ClubineTimothy_MonsterSlayer
         public string Name { get { return mName; } set { mName = value; } }
         public int Health { get { return mHealth; }  }
         public int Attack { get { return mAttack; }  }
-        public int Armor { get { return mArmor; }  }
-        
+        public int Armor { get { return mArmor; }  }        
         public List<Monster> Monsters { get { return mMonsterList; } }
 
         public Hero(string name, int health, int attack, int armor)

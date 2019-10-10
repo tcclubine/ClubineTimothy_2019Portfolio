@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace ClubineTimothy_MonsterSlayer
 {
-    class Monster
+    class Monster : IStatusChange
     {
 
+
+
+
+        public void Status()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

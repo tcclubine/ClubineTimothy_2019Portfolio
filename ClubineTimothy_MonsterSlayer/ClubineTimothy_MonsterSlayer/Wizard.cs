@@ -11,7 +11,7 @@ namespace ClubineTimothy_MonsterSlayer
         private bool mStatus;
         public bool Status { get { return mStatus; } }
 
-        public Wizard(string name, int health, int attack, int armor) : base(name, health, attack, armor)
+        public Wizard(string name) : base(name,"Wizard", 100, 5, 0)
         {
             mStatus = true;
         }

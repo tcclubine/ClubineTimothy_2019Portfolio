@@ -8,6 +8,8 @@ namespace ClubineTimothy_MonsterSlayer
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
             /*
@@ -21,11 +23,13 @@ namespace ClubineTimothy_MonsterSlayer
             List<Monster> monsterList = null;
             JSON json = new JSON();
 
-
-            Title();
-            MainMenu();
+            
+            bool programLoop = true;
             do
             {
+                Console.Clear();
+                Title();
+                MainMenu(player);
                 string input = Console.ReadLine().ToLower();
 
                 switch (input)
@@ -33,26 +37,102 @@ namespace ClubineTimothy_MonsterSlayer
                     case "h":
                     case "create hero":
                     case "hero":
-
+                        player = CreateHero(player);
                         break;
                     case "c":
                     case "change class":
                     case "class":
+                        if (PlayerNullCheck(player))
+                        {
+                            player = ChooseClass(player, player.Name);
+                        }
                         break;
                     case "f":
                     case "fight monsters!":
                     case "fight":
+                        break;
+                    case "s":
+                    case "save game":
+                    case "save":
+                        break;
+                    case "l":
+                    case "load game":
+                    case "load":
+                        break;
+                    case "x":
+                    case "exit":
+                        programLoop = false;
                         break;
                     default:
                         Console.WriteLine($"\"{input}\" is not a valid command.");
                         Console.Write("Choose an option to continue: ");
                         break;
                 }
+
+                Console.WriteLine("Press to continue.");
+                Console.ReadKey();
+            } while (programLoop);
+
+            Console.WriteLine("End of program.");
+        }
+        public static bool PlayerNullCheck(Hero p)
+        {
+            if (p == null)
+            {
+                Console.WriteLine("You must create a hero first.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }            
+            
+        }
+        public static Hero CreateHero(Hero p)
+        {
+            Console.Write("Enter a name for your Hero: ");
+            string name = Console.ReadLine();
+            while (string.IsNullOrWhiteSpace(name))
+            {
+                Console.WriteLine("Do not leave blank: ");
+                name = Console.ReadLine();
+            }
+
+            p = ChooseClass(p,name);
+
+
+            return p;
+        }
+        public static Hero ChooseClass(Hero p, string name)
+        {
+            
+            do
+            {
+                ClassMenu();
+                string input = Console.ReadLine().ToLower();
+
+                switch (input)
+                {
+                    case "w":
+                    case "warrior":
+                        p = new Warrior(name);
+                        return p;
+                    case "a":
+                    case "archer":
+                        p = new Archer(name);
+                        return p;
+                    case "z":
+                    case "wizard":
+                        p = new Wizard(name);
+                        return p;
+                    default:
+                        Console.WriteLine($"\"{input}\" is not an available class.");
+                        break;
+                }
+
             } while (true);
             
-
         }
-
 
         public static void ClassMenu()
         {
@@ -64,8 +144,12 @@ namespace ClubineTimothy_MonsterSlayer
                 "Choose a class: ";
             Console.Write(menu);
         }
-        public static void MainMenu()
+        public static void MainMenu(Hero p)
         {
+            if (p != null)
+            {
+                Console.WriteLine($"Welcome {p.ClassType} {p.Name}");
+            }
             Console.Write(                
                 "[H] Create Hero\r\n" +
                 "[C] Change Class\r\n" +

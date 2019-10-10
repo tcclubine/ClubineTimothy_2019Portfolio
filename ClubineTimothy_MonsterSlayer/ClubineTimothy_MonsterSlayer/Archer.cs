@@ -10,7 +10,7 @@ namespace ClubineTimothy_MonsterSlayer
     {
         private bool mStatus;
         public bool Status { get { return mStatus; } }
-        public Archer(string name, int health, int attack, int armor) : base(name, health, attack, armor)
+        public Archer(string name) : base(name,"Archer", 100,15,5)
         {
             mStatus = true;
         }

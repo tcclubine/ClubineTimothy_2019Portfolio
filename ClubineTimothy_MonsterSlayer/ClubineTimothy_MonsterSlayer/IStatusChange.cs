@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClubineTimothy_MonsterSlayer
 {
-    interface StatusChange
+    interface IStatusChange
     {
         void Status();
     }

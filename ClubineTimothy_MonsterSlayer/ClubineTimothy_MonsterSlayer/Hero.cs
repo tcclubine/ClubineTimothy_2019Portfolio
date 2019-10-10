@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClubineTimothy_MonsterSlayer
 {
-    abstract class Hero : StatusChange
+    abstract class Hero : IStatusChange
     {
         private string mName;
         private List<Monster> mMonsterList;
@@ -39,7 +39,7 @@ namespace ClubineTimothy_MonsterSlayer
             return temp;
         }
 
-        void StatusChange.Status()
+        void IStatusChange.Status()
         {
             mStatus = !mStatus;
         }

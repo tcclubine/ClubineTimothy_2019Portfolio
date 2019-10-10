@@ -50,6 +50,10 @@ namespace ClubineTimothy_MonsterSlayer
                     case "f":
                     case "fight monsters!":
                     case "fight":
+                        if (PlayerNullCheck(player))
+                        {
+                            Fight(player);
+                        }
                         break;
                     case "s":
                     case "save game":
@@ -64,8 +68,7 @@ namespace ClubineTimothy_MonsterSlayer
                         programLoop = false;
                         break;
                     default:
-                        Console.WriteLine($"\"{input}\" is not a valid command.");
-                        Console.Write("Choose an option to continue: ");
+                        Console.WriteLine($"\"{input}\" is not a valid command.");                        
                         break;
                 }
 
@@ -74,6 +77,10 @@ namespace ClubineTimothy_MonsterSlayer
             } while (programLoop);
 
             Console.WriteLine("End of program.");
+        }
+        public static void Fight(Hero p)
+        {
+
         }
         public static bool PlayerNullCheck(Hero p)
         {
@@ -90,13 +97,40 @@ namespace ClubineTimothy_MonsterSlayer
         }
         public static Hero CreateHero(Hero p)
         {
-            Console.Write("Enter a name for your Hero: ");
-            string name = Console.ReadLine();
-            while (string.IsNullOrWhiteSpace(name))
+            string name = null;
+            do
             {
-                Console.WriteLine("Do not leave blank: ");
-                name = Console.ReadLine();
-            }
+                if (p == null)
+                {
+                    Console.Write("Enter a name for your Hero: ");
+                    name = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(name))
+                    {
+                        Console.WriteLine("Do not leave blank. ");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Warning! This will override your current Hero.");
+                    Console.Write("Proceed? (y/n): ");
+                    string input = Console.ReadLine().ToLower();
+                    switch (input)
+                    {
+                        case "y":
+                        case "yes":
+                            p = null;
+                            break;
+                        case "n":
+                        case "no":
+                            return p;
+                        default:
+                            break;
+                    }
+                }
+                
+            } while (string.IsNullOrWhiteSpace(name));
+            
+            
 
             p = ChooseClass(p,name);
 
@@ -148,7 +182,7 @@ namespace ClubineTimothy_MonsterSlayer
         {
             if (p != null)
             {
-                Console.WriteLine($"Welcome {p.ClassType} {p.Name}");
+                Console.WriteLine($"Welcome {p.Name} the {p.ClassType}!\r\n");
             }
             Console.Write(                
                 "[H] Create Hero\r\n" +

@@ -8,13 +8,11 @@ namespace ClubineTimothy_MonsterSlayer
 {
     class Warrior : Hero, IStatusChange
     {
-        private string mClassType;
         private bool mStatus;
-        public string ClassType { get { return mClassType; } }
+        public bool Status { get { return mStatus; } }
 
         public Warrior(string name) : base(name,"Warrior", 100, 10, 10)
-        {
-            mClassType = "Warrior";
+        {            
             mStatus = true;
         }
 

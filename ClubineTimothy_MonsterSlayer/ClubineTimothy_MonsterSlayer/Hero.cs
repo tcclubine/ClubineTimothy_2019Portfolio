@@ -31,6 +31,14 @@ namespace ClubineTimothy_MonsterSlayer
             mStatus = true;
         }
 
+        virtual public int Skill()
+        {
+            int temp = -1;
+            Console.WriteLine("Error: This is the virtual Skill()");
+            Console.ReadKey();
+            return temp;
+        }
+
 
     }
 }

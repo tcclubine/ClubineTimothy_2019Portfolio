@@ -43,13 +43,13 @@ actual error because no syntax or runtime exception has occurred
 		while(query.charAt(0) === " "){ // missing ==																2
 			query = query.substring(1, query.length);
 		};
-		while(query.charAt(query.length-1) === ""){  //charat is misspelled											3
-			query = query.substring(0, query.length-1);
-		;
+		while(query.charAt(query.length-1) === "") {  //charat is misspelled										3
+			query = query.substring(0, query.length - 1);
+		}; // missing }																								4
 		
 		// Check search length, must have 3 characters
 		if(query.length < 3){
-			alert("Your search query is too small, try again."); // missing "										4
+			alert("Your search query is too small, try again."); // missing "										5
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
@@ -60,35 +60,37 @@ actual error because no syntax or runtime exception has occurred
 	};
 	
 	// Finds search matches
-	var search = function(query)
+	var search = function(query) { // missing {																		6
 		
 		// SPLIT the user's search query string into an array
-		var queryArray = query.join(" "); 
+		var queryArray = query.split(" "); // changed join to split 												7
 		
 		// array to store matched results from database.js
 		var results = [];
 
 		// loop through each index of db array
-		for(var i=0, j=db.length; i<j; i++){
-		
+		for(var i=0, j=db.length; i<j; i++) {
+
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
 			var dbTitleEnd = db[i].indexOf('|');
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
-			
+			var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd); // tolowercase misspelled					8
+
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
-			for(var ii=0, jj=queryArray.length; ii<jj; ii++){
-				var qitem = queryArray[ii].tolowercase(); 
-				
+			for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
+				var qitem = queryArray[ii].toLowerCase(); // tolowercase misspelled									9
+
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
 				var compare = dbitem.indexOf(qitem);
-				if(compare !== -1){
+				if (compare !== -1) {
 					results.push(db[i]);
-				};
-			; 
-		;
+				}
+				;
+			} // missing}																							10
+			;
+		}; // missing }																								11
 		
 		results.sort();
 		
@@ -123,8 +125,8 @@ actual error because no syntax or runtime exception has occurred
 		
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|');
-			title = results[i].subString(0, titleEnd);
+			let titleEnd = results[i].indexOf('|'); // let added													12
+			title = results[i].substring(0, titleEnd); // substring misspelled										13
 			
 			// pull the video url after the title
 			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
@@ -136,14 +138,14 @@ actual error because no syntax or runtime exception has occurred
 	};
 	
 	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function(){
+	document.forms[0].onsubmit = function() {
 		var query = searchInput.value;
 		validqte(query);
 
- 
-        // THE LINE DIRECTLY BELOW IS CORRECT
+
+		// THE LINE DIRECTLY BELOW IS CORRECT
 		return false;
-	;
+	}; // missing }																									14
 	
 //THE LINE BELOW IS CORRECT. It is the close of the self executing function.
 })();

@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/../ClubineTimothy_MonsterSlayer/ClubineTimothy_MonsterSlayer/Archer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ClubineTimothy_MonsterSlayer/ClubineTimothy_MonsterSlayer/Archer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ClubineTimothy_MonsterSlayer/ClubineTimothy_MonsterSlayer/IStatusChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ClubineTimothy_MonsterSlayer/ClubineTimothy_MonsterSlayer/IStatusChange.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ClubineTimothy_MonsterSlayer/ClubineTimothy_MonsterSlayer/Wizard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ClubineTimothy_MonsterSlayer/ClubineTimothy_MonsterSlayer/Wizard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wk2_debug_buggySearch/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/wk2_debug_buggySearch/js/search.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wk2_debug_buggySearch/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="58" column="22" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+            <state relative-caret-position="493">
+              <caret line="29" column="77" lean-forward="true" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
               <folding>
                 <element signature="n#style#0;n#p#1;n#!!top" expanded="true" />
               </folding>
@@ -95,6 +96,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -122,12 +124,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570822810971</updated>
-      <workItem from="1570822812870" duration="966000" />
+      <workItem from="1570822812870" duration="1743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="966000" />
+    <option name="totallyTimeSpent" value="1743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1369" y="0" width="1390" height="1119" extended-state="0" />
@@ -161,8 +163,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wk2_debug_buggySearch/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="58" column="22" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+        <state relative-caret-position="493">
+          <caret line="29" column="77" lean-forward="true" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
           <folding>
             <element signature="n#style#0;n#p#1;n#!!top" expanded="true" />
           </folding>

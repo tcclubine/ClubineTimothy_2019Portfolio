@@ -24,6 +24,12 @@ actual error because no syntax or runtime exception has occurred
 ‣ the problem is simply in the programmer’s logic
 
 ***********************/
+/***********************************
+* Timothy Clubine
+* WDD229-O
+* Assignment 5: Debugging JavaScript
+* 10/11/2019
+************************************/
 // 14 total errors
 // LABEL EACH CORRECTED ERROR WITH A COMMENT!!!
 
@@ -95,7 +101,7 @@ actual error because no syntax or runtime exception has occurred
 		results.sort();
 		
 		// Check that matches were found, and run output functions
-		if(results.length = 0){ 
+		if(results.length === 0){ // added ==																		12
 			noMatch();
 		}else{
 			showMatches(results);
@@ -125,7 +131,7 @@ actual error because no syntax or runtime exception has occurred
 		
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			let titleEnd = results[i].indexOf('|'); // let added													12
+			let titleEnd = results[i].indexOf('|'); // let added
 			title = results[i].substring(0, titleEnd); // substring misspelled										13
 			
 			// pull the video url after the title

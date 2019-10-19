@@ -53,7 +53,7 @@ JSON
 //converts JSON text (string) into a javascript object
 //JSON.parse(var name assigned to the JSON object)
 var obj = JSON.parse(text);
-console.log(obj);
+//console.log(obj);
 
 console.log(obj.employees[1].firstName + " " + obj.employees[1].lastName);
 
@@ -73,17 +73,20 @@ console.log(myJSON.people[0].job);
 //1. Create a JSON object in the blank json_weather.js file using the provided weatherData.txt file.
 // Use the following line if code to test your new file: console.log(data.results.forecast[2].day);
 
-
+/**-- See json_weather.js --**/
 
 // 2. Console.log the forecast for the next 3 days in sentence (String) format
 // example: Today is Saturday. The high is 82. The low is 65. It will be partly cloudy.
 
-
+/**-- See json_weather.js --**/
 
 // 3. Console.log each of the employees showing their full names (from the object "employees"
 // and jobs (from the object "people").
 
-
+for (var i = 0; i < 3; i++)
+{
+    console.log(obj.employees[i].firstName + " " + obj.employees[i].lastName + " : " + myJSON.people[i].job);
+}
 
 
 

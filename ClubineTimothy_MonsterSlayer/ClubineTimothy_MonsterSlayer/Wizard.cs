@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace ClubineTimothy_MonsterSlayer
 {
-    class Wizard : Hero, IStatusChange
+    class Wizard : Hero
     {
-        private bool mStatus;
-        public bool Status { get { return mStatus; } }
+        
 
         public Wizard(string name) : base(name,"Wizard", 100, 5, 0)
         {
-            mStatus = true;
+            
         }
 
         public override int Skill()
@@ -22,9 +21,6 @@ namespace ClubineTimothy_MonsterSlayer
             return SkillAttack;
         }
 
-        void IStatusChange.Status()
-        {
-            mStatus = !mStatus;
-        }
+        
     }
 }

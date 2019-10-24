@@ -20,10 +20,12 @@ namespace ClubineTimothy_MonsterSlayer
              */
 
             Hero player = null;
-            List<Monster> monsterList = null;
+            List<Monster> monsterList = new List<Monster>();
             JSON json = new JSON();
+            monsterList = json.CreateMonsterList();
 
-            
+            player.Status(null,null);
+
             bool programLoop = true;
             do
             {

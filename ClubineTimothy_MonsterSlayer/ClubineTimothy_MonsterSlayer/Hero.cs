@@ -20,7 +20,7 @@ namespace ClubineTimothy_MonsterSlayer
 
         public string Name { get { return mName; } }
         public string ClassType { get { return mClassType; }  }
-        public int Health { get { return mHealth; }  }
+        public int Health { get { return mHealth; } set { mHealth = value; } }
         public int Attack { get { return mAttack; }  }
         public int Armor { get { return mArmor; }  }
         public bool CanIAttack { get { return mCanIAttack; } }
@@ -47,31 +47,29 @@ namespace ClubineTimothy_MonsterSlayer
             return temp;
         }
 
-        public void Status(Hero p, Monster m)
+        public void Status(Hero a, Monster d)
         {
-            if (p == null && m == null)
+            if (a == null && d == null)
             {
                 // reset monster status
                 mCanIAttack = true;
                 mCanIBeAttacked = true;
 
             }
-            else if (p == null && m != null )
+            else if (a == null && d != null )
             {
-                // Monster cannot attack
+                // cannot attack
                 mCanIAttack = false;
             }
-            else if (p != null && m == null)
+            else if (a != null && d == null)
             {
-                // Monster cannot be attacked
+                // cannot be attacked
                 mCanIBeAttacked = false;
             }
-            else if (p != null && m != null)
-            {
-
-            }
+            
             
 
         }
+
     }
 }

@@ -23,7 +23,7 @@ namespace ClubineTimothy_MonsterSlayer
             List<Monster> monsterList = null;
             JSON json = new JSON();
 
-            player.Status(player, monsterList[0]);
+            //player.Status(player, monsterList[0]);
 
             bool programLoop = true;
             do

@@ -8,6 +8,6 @@ namespace ClubineTimothy_MonsterSlayer
 {
     interface IStatusChange
     {
-        void Status(Hero p, Monster m);
+        void Status(Hero p);
     }
 }

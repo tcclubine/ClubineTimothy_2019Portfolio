@@ -24,8 +24,6 @@ namespace ClubineTimothy_MonsterSlayer
             JSON json = new JSON();
             monsterList = json.CreateMonsterList();
 
-            //player.Status(null,null);
-
             bool programLoop = true;
             do
             {
@@ -54,7 +52,7 @@ namespace ClubineTimothy_MonsterSlayer
                     case "fight":
                         if (PlayerNullCheck(player))
                         {
-                            Fight(player);
+                            Fight(player, monsterList);
                             foreach (Monster m in monsterList)
                             {
                                 Console.WriteLine(m.Name);
@@ -76,9 +74,39 @@ namespace ClubineTimothy_MonsterSlayer
 
             Console.WriteLine("End of program.");
         }
-        public static void Fight(Hero p)
+        public static List<Monster> Fight(Hero player, List<Monster> mList)
         {
+            Monster m = mList[0];
+            // turn counter
+            int turn = 1;
+            do
+            {
+                
+                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine(
+                "------FIGHT!------");
+                FightMenu();
+                
+            
+                // create player turn
+                // create monster turn
+                // resolve turn
+                turn += 1;
+            } while (true);
+            
 
+            return mList;
+        }
+        public static void FightMenu()
+        {
+            string fMenu =
+                "[a] Attack \r\n" +
+                "[s] Use Skill \r\n" +
+                "[r] Run Away \r\n" +
+                "-----------------------------\r\n" +
+                "Choose an action: ";
+            Console.Write(fMenu);
         }
         public static bool PlayerNullCheck(Hero p)
         {
@@ -169,6 +197,9 @@ namespace ClubineTimothy_MonsterSlayer
         public static void ClassMenu()
         {
             string menu =
+                "-----------" +
+                "   Class   " +
+                "-----------" +
                 "[W] Warrior \r\n" +
                 "[A] Archer \r\n" +
                 "[Z] Wizard \r\n" +

@@ -12,10 +12,6 @@ namespace ClubineTimothy_MonsterSlayer
     {
         public JSON() { }
 
-        public void Save() { }
-
-        public void Load() { }
-
         public List<Monster> CreateMonsterList()
         {
             List<Monster> mList = new List<Monster>();

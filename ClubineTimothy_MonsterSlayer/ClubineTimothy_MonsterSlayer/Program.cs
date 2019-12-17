@@ -61,14 +61,6 @@ namespace ClubineTimothy_MonsterSlayer
                             }
                         }
                         break;
-                    case "s":
-                    case "save game":
-                    case "save":
-                        break;
-                    case "l":
-                    case "load game":
-                    case "load":
-                        break;
                     case "x":
                     case "exit":
                         programLoop = false;
@@ -195,8 +187,6 @@ namespace ClubineTimothy_MonsterSlayer
                 "[C] Change Class\r\n" +
                 "[F] Fight Monsters!\r\n" +
                 "\r\n" +
-                "[S] Save Game\r\n" +
-                "[L] Load Game\r\n" +
                 "[X] Exit\r\n" +
                 "---------------------------------------------\r\n" +
                 "Choose an option to continue: "

@@ -17,14 +17,14 @@ namespace ClubineTimothy_MonsterSlayer
         private string mPreAttackDescription;
         private string mSpecialAttackDescription;
 
-        public string Name { get { return mName; } }
-        public string Description { get { return mDescription; } }
-        public int Health { get { return mHealth; } }
-        public int Attack { get { return mAttack; } }
-        public int Armor { get { return mArmor; } }
-        public int SpecialAttackTurn { get { return mSpecialAttackTurn; } }
-        public string PreAttackDescription { get { return mPreAttackDescription; } }
-        public string SpecialAttackDescription { get { return mSpecialAttackDescription; } }
+        public string Name { get { return mName; } set { mName = value; } }
+        public string Description { get { return mDescription; } set { mDescription = value; } }
+        public int Health { get { return mHealth; } set { mHealth = value; } }
+        public int Attack { get { return mAttack; } set { mAttack = value; } }
+        public int Armor { get { return mArmor; } set { mArmor = value; } }
+        public int SpecialAttackTurn { get { return mSpecialAttackTurn; } set { mSpecialAttackTurn = value; } }
+        public string PreAttackDescription { get { return mPreAttackDescription; } set { mPreAttackDescription = value; } }
+        public string SpecialAttackDescription { get { return mSpecialAttackDescription; } set { mSpecialAttackDescription = value; } }
 
         public Monster() {
             

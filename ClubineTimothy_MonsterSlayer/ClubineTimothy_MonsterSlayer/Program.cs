@@ -20,11 +20,11 @@ namespace ClubineTimothy_MonsterSlayer
              */
 
             Hero player = null;
-            List<Monster> monsterList = new List<Monster>();
+            List<Monster> monsterList = null;
             JSON json = new JSON();
             monsterList = json.CreateMonsterList();
 
-            player.Status(null,null);
+            //player.Status(null,null);
 
             bool programLoop = true;
             do
@@ -55,6 +55,10 @@ namespace ClubineTimothy_MonsterSlayer
                         if (PlayerNullCheck(player))
                         {
                             Fight(player);
+                            foreach (Monster m in monsterList)
+                            {
+                                Console.WriteLine(m.Name);
+                            }
                         }
                         break;
                     case "s":

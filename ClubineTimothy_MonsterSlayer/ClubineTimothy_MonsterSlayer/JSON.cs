@@ -20,11 +20,21 @@ namespace ClubineTimothy_MonsterSlayer
                 string line = inputStream.ReadToEnd();
 
                 mList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Monster>>(line);
-                Console.WriteLine(mList[0].Name);
-                Console.WriteLine(mList[1].Name);
-                Console.WriteLine(mList[2].Name);
-                Console.WriteLine("Press any key.");
+                
+            }
+            foreach (Monster m in mList)
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine(m.Name);
+                Console.WriteLine(m.Description);
+                Console.WriteLine(m.Health);
+                Console.WriteLine(m.Attack);
+                Console.WriteLine(m.Armor);
+                Console.WriteLine(m.SpecialAttackTurn);
+                Console.WriteLine(m.PreAttackDescription);
+                Console.WriteLine(m.SpecialAttackDescription);
                 Console.ReadKey();
+                
             }
 
             return mList;

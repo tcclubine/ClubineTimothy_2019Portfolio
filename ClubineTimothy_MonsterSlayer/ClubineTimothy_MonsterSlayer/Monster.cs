@@ -31,19 +31,44 @@ namespace ClubineTimothy_MonsterSlayer
         }
 
         public void MonsterAttack(Hero player, int turn) {
-            if (mSpecialAttackTurn == turn -1)
+            int dmg = this.Attack - player.Armor;
+
+            if (this.SpecialAttackTurn == turn - 1)
             {
-                Console.WriteLine(mPreAttackDescription);
+                Console.WriteLine(this.PreAttackDescription);
+                Console.ReadKey();
             }
-            if (mSpecialAttackTurn == turn)
+
+            if (player.CanIBeAttacked)
             {
-                Console.WriteLine(mSpecialAttackDescription);
-                player.Health -= mAttack + 10;
+                if (this.SpecialAttackTurn == turn)
+                {
+                    dmg = (this.Attack + 10) - player.Armor;
+                    Console.WriteLine(mSpecialAttackDescription);
+                    Console.WriteLine($"You take {dmg} damage from the {this.Name}");
+                    player.Health -= dmg;
+                }
+                else
+                {
+                    Console.WriteLine($"You take {dmg} damage from the {this.Name}");
+                    player.Health -= dmg;
+                }
             }
             else
             {
-                player.Health -= mAttack;
+                if (player is Archer)
+                {
+                    Console.WriteLine($"You dodge the {this.Name}'s attack.");
+                }
+                else if (player is Warrior)
+                {
+                    if (dmg < 1)
+                    {
+                        Console.WriteLine($"The {this.Name} cannot damage you. Your armor is too strong.");
+                    }
+                }
             }
+            
         }
 
         

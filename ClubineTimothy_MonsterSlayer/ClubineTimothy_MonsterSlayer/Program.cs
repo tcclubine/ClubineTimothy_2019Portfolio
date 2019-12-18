@@ -52,7 +52,7 @@ namespace ClubineTimothy_MonsterSlayer
                     case "fight":
                         if (PlayerNullCheck(player))
                         {
-                            Fight(player, monsterList);                            
+                            monsterList = Fight(player, monsterList);                            
                         }
                         break;
                     case "x":
@@ -60,7 +60,7 @@ namespace ClubineTimothy_MonsterSlayer
                         programLoop = false;
                         break;
                     default:
-                        DefaultMenuMessage(input);                        
+                        DefaultMenuMessage(input);
                         break;
                 }
 
@@ -80,11 +80,10 @@ namespace ClubineTimothy_MonsterSlayer
             {
                 Monster m = mList[0];
                 Console.Clear();
-                Console.WriteLine($"Turn {turn}");
+                Console.WriteLine($"{player.Name}'s Health: {player.Health}");
                 // Declare monster to player
                 Console.WriteLine(m.Description);
-                Console.WriteLine(
-                "------FIGHT!------");
+                Console.WriteLine("------FIGHT!------");
                 FightMenu();
 
                 string input = Console.ReadLine().ToLower();
@@ -94,22 +93,30 @@ namespace ClubineTimothy_MonsterSlayer
                     case "a":
                     case "attack":
                         dmg = player.Attack - m.Armor;
-                        Console.WriteLine($"You did {dmg} to the {m.Name}.");
-                        PressToContinue();
-                        m.Health -=  dmg;
+                        if (dmg <0)
+                        {
+                            Console.WriteLine($"You did no damage. The {m.Name}'s armor is too strong.");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"You did {dmg} damage to the {m.Name}.");
+                            PressToContinue();
+                            m.Health -= dmg;
+                        }
+                        
                         break;
                     case "s":
                     case "use skill":
                     case "skill":
                         dmg = player.Skill("attack") - m.Armor;
-                        Console.WriteLine($"You did {dmg} to the {m.Name}.");
+                        Console.WriteLine($"You did {dmg} damage to the {m.Name}.");
                         m.Health -= dmg;
                         PressToContinue();
                         break;
                     case "r":
                     case "run away":
                     case "run":
-                        Console.WriteLine($"You successfully run away. The {m.Name} regains it's health while it waits for your return.");
+                        Console.WriteLine($"You successfully ran away. The {m.Name} regains it's health while it waits for your return.");
                         m.Health = 100;
                         player.Health = 100;
                         fightLoop = false;
@@ -122,21 +129,42 @@ namespace ClubineTimothy_MonsterSlayer
                 if (m.Health < 1)
                 {
                     Console.WriteLine($"You have slain the {m.Name}!");
+                    turn = 1;
                     mList.RemoveAt(0);
                     PressToContinue();
                 }
+                else
+                {
+                    if (fightLoop)
+                    {
+                        // create monster turn
+                        m.MonsterAttack(player, turn);
+                        if (player.Health < 1)
+                        {
+                            Console.WriteLine("You have died.");
+                            fightLoop = false;
+                            m.Health = 100;
+                            player.Health = 100;
+                        }
+                        // resolve turn
+                        turn += 1;
+                        if (!player.CanIBeAttacked)
+                        {
+                            player.Status();
+                        }
+                    }
+                    
+                }
+                PressToContinue();
 
-                // create monster turn
-                m.MonsterAttack(player, turn);
-                // resolve turn
-                turn += 1;
-            } while (fightLoop || mList.Count <= 0);
+            } while (fightLoop && mList.Count > 0);
 
-            if (mList.Count < 1)
+            if (mList.Count < 1 && player.Health > 0)
             {
                 Console.WriteLine("Congratulations! You have slain all of the monsters.");
                 PressToContinue();
             }
+            
             return mList;
         }
         
@@ -249,7 +277,7 @@ namespace ClubineTimothy_MonsterSlayer
             string menu =
                 "-----------" +
                 "   Class   " +
-                "-----------" +
+                "-----------\r\n" +
                 "[W] Warrior \r\n" +
                 "[A] Archer \r\n" +
                 "[Z] Wizard \r\n" +

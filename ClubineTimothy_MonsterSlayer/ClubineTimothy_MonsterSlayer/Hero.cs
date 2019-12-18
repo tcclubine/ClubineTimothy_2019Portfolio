@@ -35,7 +35,7 @@ namespace ClubineTimothy_MonsterSlayer
             
         }
 
-        virtual public int Skill(string s)
+        virtual public int Skill()
         {
             int temp = -1;
             Console.WriteLine("Error: This is the virtual Skill()");

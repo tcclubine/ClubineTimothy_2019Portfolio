@@ -15,7 +15,7 @@ namespace ClubineTimothy_MonsterSlayer
             
         }
 
-        public override int Skill(string s)
+        public override int Skill()
         {
             Console.WriteLine("You bolster you attack and defense.");
             this.Attack += 10;

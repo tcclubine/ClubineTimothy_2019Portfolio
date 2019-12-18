@@ -1,0 +1,23 @@
+[{
+			"name": "Dire Wolf",
+			"description": "A Dire Wolf emerges from the forest and bares it's fangs at you.",
+			"health": 100,
+			"attack": 25,
+			"armor": 4
+		},
+		{
+			"name": "Zombie",
+			"description": "A Zombie groans from behind you. Protect your brain!",
+			"health": 100,
+			"attack": 5,
+			"armor": 0,
+			"specialAttackTurn": 2
+		},
+		{
+			"name": "Dragon",
+			"description": "A Dragon flies overhead. It roars a challenge and lands before you.",
+			"health": 100,
+			"attack": 10,
+			"armor": 50
+		}
+	]

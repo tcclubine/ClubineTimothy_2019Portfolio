@@ -15,20 +15,11 @@ namespace ClubineTimothy_MonsterSlayer
             
         }
 
-        public override int Skill(string s)
+        public override int Skill()
         {
-            int skillAttack = -1;
-            if (s == "attack")
-            {
-                Console.WriteLine("You cast Fireball at the monster.");
-                skillAttack = 100;
-            }
-            else
-            {
-                Console.WriteLine("You cast Shield to protect yourself.");
-                this.Status();
-            }
-            
+            int skillAttack = 100;
+            Console.WriteLine("You cast Fireball at the monster.");
+
             return skillAttack;
         }
 

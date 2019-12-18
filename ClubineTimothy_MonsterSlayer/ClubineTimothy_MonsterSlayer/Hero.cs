@@ -39,7 +39,7 @@ namespace ClubineTimothy_MonsterSlayer
             
         }
 
-        virtual public int Skill()
+        virtual public int Skill(string s)
         {
             int temp = -1;
             Console.WriteLine("Error: This is the virtual Skill()");
@@ -47,29 +47,12 @@ namespace ClubineTimothy_MonsterSlayer
             return temp;
         }
 
-        public void Status(Hero a, Monster d)
+        public void Status()
         {
-            if (a == null && d == null)
-            {
-                // reset monster status
-                mCanIAttack = true;
-                mCanIBeAttacked = true;
-
-            }
-            else if (a == null && d != null )
-            {
-                // cannot attack
-                mCanIAttack = false;
-            }
-            else if (a != null && d == null)
-            {
-                // cannot be attacked
-                mCanIBeAttacked = false;
-            }
-            
-            
-
+            mCanIBeAttacked = !mCanIBeAttacked;
         }
 
+
+         
     }
 }

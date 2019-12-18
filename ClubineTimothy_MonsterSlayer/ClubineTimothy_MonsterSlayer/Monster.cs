@@ -13,27 +13,29 @@ namespace ClubineTimothy_MonsterSlayer
         private int mHealth;
         private int mAttack;
         private int mArmor;
-        private int mAttackPattern;
+        private int mSpecialAttackTurn;
         private string mPreAttackDescription;
         private string mSpecialAttackDescription;
 
-        public Monster(string name, string description, int health, int attack, int armor, int attackPattern,string preAttackDescription, string specialAttackDescription) {
-            mName = name;
-            mDescription = description;
-            mHealth = health;
-            mAttack = attack;
-            mArmor = armor;
-            mAttackPattern = attackPattern;
-            mPreAttackDescription = preAttackDescription;
-            mSpecialAttackDescription = specialAttackDescription;
+        public string Name { get { return mName; } set { mName = value; } }
+        public string Description { get { return mDescription; } set { mDescription = value; } }
+        public int Health { get { return mHealth; } set { mHealth = value; } }
+        public int Attack { get { return mAttack; } set { mAttack = value; } }
+        public int Armor { get { return mArmor; } set { mArmor = value; } }
+        public int SpecialAttackTurn { get { return mSpecialAttackTurn; } set { mSpecialAttackTurn = value; } }
+        public string PreAttackDescription { get { return mPreAttackDescription; } set { mPreAttackDescription = value; } }
+        public string SpecialAttackDescription { get { return mSpecialAttackDescription; } set { mSpecialAttackDescription = value; } }
+
+        public Monster() {
+            
         }
 
         public void MonsterAttack(Hero player, int turn) {
-            if (mAttackPattern == turn -1)
+            if (mSpecialAttackTurn == turn -1)
             {
                 Console.WriteLine(mPreAttackDescription);
             }
-            if (mAttackPattern == turn)
+            if (mSpecialAttackTurn == turn)
             {
                 Console.WriteLine(mSpecialAttackDescription);
                 player.Health -= mAttack + 10;

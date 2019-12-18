@@ -22,8 +22,7 @@ namespace ClubineTimothy_MonsterSlayer
             Hero player = null;
             List<Monster> monsterList = null;
             JSON json = new JSON();
-
-            player.Status(player, monsterList[0]);
+            monsterList = json.CreateMonsterList();
 
             bool programLoop = true;
             do
@@ -53,35 +52,101 @@ namespace ClubineTimothy_MonsterSlayer
                     case "fight":
                         if (PlayerNullCheck(player))
                         {
-                            Fight(player);
+                            Fight(player, monsterList);                            
                         }
-                        break;
-                    case "s":
-                    case "save game":
-                    case "save":
-                        break;
-                    case "l":
-                    case "load game":
-                    case "load":
                         break;
                     case "x":
                     case "exit":
                         programLoop = false;
                         break;
                     default:
-                        Console.WriteLine($"\"{input}\" is not a valid command.");                        
+                        DefaultMenuMessage(input);                        
                         break;
                 }
 
-                Console.WriteLine("Press to continue.");
-                Console.ReadKey();
+                PressToContinue();
             } while (programLoop);
 
             Console.WriteLine("End of program.");
         }
-        public static void Fight(Hero p)
+        public static List<Monster> Fight(Hero player, List<Monster> mList)
         {
+            
+            bool fightLoop = true;
+            int dmg = -1;
+            // turn counter
+            int turn = 1;
+            do
+            {
+                Monster m = mList[0];
+                Console.Clear();
+                Console.WriteLine($"Turn {turn}");
+                // Declare monster to player
+                Console.WriteLine(m.Description);
+                Console.WriteLine(
+                "------FIGHT!------");
+                FightMenu();
 
+                string input = Console.ReadLine().ToLower();
+                // create player turn
+                switch (input)
+                {
+                    case "a":
+                    case "attack":
+                        dmg = player.Attack - m.Armor;
+                        Console.WriteLine($"You did {dmg} to the {m.Name}.");
+                        PressToContinue();
+                        m.Health -=  dmg;
+                        break;
+                    case "s":
+                    case "use skill":
+                    case "skill":
+                        dmg = player.Skill("attack") - m.Armor;
+                        Console.WriteLine($"You did {dmg} to the {m.Name}.");
+                        m.Health -= dmg;
+                        PressToContinue();
+                        break;
+                    case "r":
+                    case "run away":
+                    case "run":
+                        Console.WriteLine($"You successfully run away. The {m.Name} regains it's health while it waits for your return.");
+                        m.Health = 100;
+                        player.Health = 100;
+                        fightLoop = false;
+                        break;
+                    default:
+                        DefaultMenuMessage(input);
+                        PressToContinue();
+                        break;
+                }
+                if (m.Health < 1)
+                {
+                    Console.WriteLine($"You have slain the {m.Name}!");
+                    mList.RemoveAt(0);
+                    PressToContinue();
+                }
+
+                // create monster turn
+                m.MonsterAttack(player, turn);
+                // resolve turn
+                turn += 1;
+            } while (fightLoop || mList.Count <= 0);
+
+            if (mList.Count < 1)
+            {
+                Console.WriteLine("Congratulations! You have slain all of the monsters.");
+                PressToContinue();
+            }
+            return mList;
+        }
+        
+        public static void DefaultMenuMessage(string input)
+        {
+            Console.WriteLine($"\"{input}\" is not a valid command.");
+        }
+        public static void PressToContinue() {
+            Console.WriteLine("Press to continue.");
+            Console.ReadKey();
         }
         public static bool PlayerNullCheck(Hero p)
         {
@@ -169,9 +234,22 @@ namespace ClubineTimothy_MonsterSlayer
             
         }
 
+        public static void FightMenu()
+        {
+            string fMenu =
+                "[a] Attack \r\n" +
+                "[s] Use Skill \r\n" +
+                "[r] Run Away \r\n" +
+                "-----------------------------\r\n" +
+                "Choose an action: ";
+            Console.Write(fMenu);
+        }
         public static void ClassMenu()
         {
             string menu =
+                "-----------" +
+                "   Class   " +
+                "-----------" +
                 "[W] Warrior \r\n" +
                 "[A] Archer \r\n" +
                 "[Z] Wizard \r\n" +
@@ -190,8 +268,6 @@ namespace ClubineTimothy_MonsterSlayer
                 "[C] Change Class\r\n" +
                 "[F] Fight Monsters!\r\n" +
                 "\r\n" +
-                "[S] Save Game\r\n" +
-                "[L] Load Game\r\n" +
                 "[X] Exit\r\n" +
                 "---------------------------------------------\r\n" +
                 "Choose an option to continue: "

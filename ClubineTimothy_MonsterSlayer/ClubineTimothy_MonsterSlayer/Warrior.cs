@@ -15,7 +15,7 @@ namespace ClubineTimothy_MonsterSlayer
             
         }
 
-        public override int Skill()
+        public override int Skill(string s)
         {
             int SkillAttack = 50;
             return SkillAttack;

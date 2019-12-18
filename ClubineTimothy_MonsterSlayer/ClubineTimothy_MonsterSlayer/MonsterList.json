@@ -1,0 +1,31 @@
+[{
+			"name": "Dire Wolf",
+			"description": "A Dire Wolf emerges from the forest and bares it's fangs at you.",
+			"health": 100,
+			"attack": 25,
+			"armor": 4,
+			"specialAttackTurn": 3,
+			"preAttackDescription": "The Dire Wolf howls calling for reinforcements. Your surrounded.",
+			"specialAttackDescription": "The wolf pack attacks."
+		},
+		{
+			"name": "Zombie",
+			"description": "A Zombie groans from behind you. Protect your brain!",
+			"health": 100,
+			"attack": 5,
+			"armor": 0,
+			"specialAttackTurn": 2,
+			"preAttackDescription": "The Zombie shuffles closer to you.",
+			"specialAttackDescription": "The Zombie takes a bite out of you restoring it's health."
+		},
+		{
+			"name": "Dragon",
+			"description": "A Dragon flies overhead. It roars a challenge and lands before you.",
+			"health": 100,
+			"attack": 10,
+			"armor": 50,
+			"specialAttackTurn": 5,
+			"preAttackDescription": "The Dragon's belly begins to glow. Prepare yourself.",
+			"specialAttackDescription": "The Dragon spews forth fire at you."
+		}
+	]

@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/bin/Debug/ClubineTimothy_MonsterSlayer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/bin/Debug/ClubineTimothy_MonsterSlayer.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/bin/Debug/ClubineTimothy_MonsterSlayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/bin/Debug/ClubineTimothy_MonsterSlayer.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.exe" afterDir="false" />
@@ -33,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="309" lean-forward="true" selection-start-line="309" selection-end-line="309" />
+            <state relative-caret-position="623">
+              <caret line="237" column="39" selection-start-line="237" selection-start-column="39" selection-end-line="237" selection-end-column="39" />
               <folding>
                 <element signature="n#!!block;n#FightMenu#0" />
                 <element signature="n#!!block;n#ClassMenu#0" />
@@ -44,7 +45,6 @@
                 <element signature="n#!!block;n#PlayerNullCheck#0" />
                 <element signature="n#!!block;n#CreateHero#0" />
                 <element signature="n#!!block;n#ChooseClass#0" />
-                <element signature="n#!!block;n#Fight#0" />
               </folding>
             </state>
           </provider>
@@ -52,7 +52,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/MonsterList.json">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -72,6 +76,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/index.html" />
+        <option value="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/MonsterList.json" />
         <option value="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/main.js" />
       </list>
     </option>
@@ -145,12 +150,12 @@
       <option name="presentableId" value="Default" />
       <updated>1576660417126</updated>
       <workItem from="1576660418208" duration="614000" />
-      <workItem from="1576724249686" duration="5772000" />
+      <workItem from="1576724249686" duration="7718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6386000" />
+    <option name="totallyTimeSpent" value="8332000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1368" y="0" width="1392" height="1120" extended-state="0" />
@@ -190,12 +195,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/MonsterList.json">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="309" lean-forward="true" selection-start-line="309" selection-end-line="309" />
+        <state relative-caret-position="623">
+          <caret line="237" column="39" selection-start-line="237" selection-start-column="39" selection-end-line="237" selection-end-column="39" />
           <folding>
             <element signature="n#!!block;n#FightMenu#0" />
             <element signature="n#!!block;n#ClassMenu#0" />
@@ -205,7 +214,6 @@
             <element signature="n#!!block;n#PlayerNullCheck#0" />
             <element signature="n#!!block;n#CreateHero#0" />
             <element signature="n#!!block;n#ChooseClass#0" />
-            <element signature="n#!!block;n#Fight#0" />
           </folding>
         </state>
       </provider>

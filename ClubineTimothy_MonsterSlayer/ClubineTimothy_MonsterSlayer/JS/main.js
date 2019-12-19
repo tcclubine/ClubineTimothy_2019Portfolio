@@ -7,7 +7,7 @@
 var player = null;
 var monsterList = null;
 var json = new JSON();
-monsterList = monsterList.json();
+monsterList = JSON.parse();
 
 var programLoop = true;
 do {
@@ -229,23 +229,13 @@ function Fight(player, mList){
                 case "a":
                 case "attack":
                     dmg = player.Attack - m.Armor;
-                    if (dmg < 0)
-                    {
-                        alert("You do no damage. The "+m.Name+"'s armor is too strong.");
-
-                    }
-                    else
-                    {
-                        alert("You do "+dmg+" damage to the "+m.Name+".");
-                        m.Health -= dmg;
-                    }
+                    DamageCalc(dmg, m);
                     break;
                 case "s":
                 case "use skill":
                 case "skill":
                     dmg = player.Skill() - m.Armor;
-                    alert("You do "+dmg+" damage to the "+m.Name+".");
-                    m.Health -= dmg;
+                    DamageCalc(dmg, m);
                     break;
                 case "r":
                 case "run away":
@@ -304,6 +294,19 @@ function Fight(player, mList){
     }
 
     return mList;
+};
+function DamageCalc(dmg,m){
+    if (dmg < 1)
+    {
+        alert("You do no damage. The "+m.Name+"'s armor is too strong.");
+
+    }
+    else
+    {
+        alert("You do "+dmg+" damage to the "+m.Name+".");
+
+        m.Health -= dmg;
+    }
 };
 
 /** Classes */

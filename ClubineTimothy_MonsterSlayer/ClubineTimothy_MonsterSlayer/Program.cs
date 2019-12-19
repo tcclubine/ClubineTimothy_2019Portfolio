@@ -182,26 +182,14 @@ namespace ClubineTimothy_MonsterSlayer
                         case "a":
                         case "attack":
                             dmg = player.Attack - m.Armor;
-                            if (dmg < 0)
-                            {
-                                Console.WriteLine($"You do no damage. The {m.Name}'s armor is too strong.");
-                                PressToContinue();
-                            }
-                            else
-                            {
-                                Console.WriteLine($"You do {dmg} damage to the {m.Name}.");
-                                PressToContinue();
-                                m.Health -= dmg;
-                            }
+                            DamageCalc(dmg, m);
 
                             break;
                         case "s":
                         case "use skill":
                         case "skill":
                             dmg = player.Skill() - m.Armor;
-                            Console.WriteLine($"You did {dmg} damage to the {m.Name}.");
-                            m.Health -= dmg;
-                            PressToContinue();
+                            DamageCalc(dmg, m);
                             break;
                         case "r":
                         case "run away":
@@ -265,6 +253,19 @@ namespace ClubineTimothy_MonsterSlayer
             }
 
             return mList;
+        }
+        public static void DamageCalc(int dmg, Monster m) {
+            if (dmg < 1)
+            {
+                Console.WriteLine($"You do no damage. The {m.Name}'s armor is too strong.");
+                PressToContinue();
+            }
+            else
+            {
+                Console.WriteLine($"You do {dmg} damage to the {m.Name}.");
+                PressToContinue();
+                m.Health -= dmg;
+            }
         }
 
         public static void DefaultMenuMessage(string input)

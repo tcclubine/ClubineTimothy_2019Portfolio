@@ -15,7 +15,7 @@ namespace ClubineTimothy_MonsterSlayer
         public List<Monster> CreateMonsterList()
         {
             List<Monster> mList = new List<Monster>();
-            string file = @"..\..\JS\MonsterList.json";
+            string file = @"..\..\MonsterList.json";
             using (StreamReader inputStream = new StreamReader(file)) {
                 string line = inputStream.ReadToEnd();
 

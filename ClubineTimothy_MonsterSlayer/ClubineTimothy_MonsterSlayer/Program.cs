@@ -159,8 +159,7 @@ namespace ClubineTimothy_MonsterSlayer
 
             bool fightLoop = true;
             int dmg = -1;
-            // turn counter
-            int turn = 1;
+            
             do
             {
                 Monster m = mList[0];
@@ -211,8 +210,7 @@ namespace ClubineTimothy_MonsterSlayer
 
                 if (m.Health < 1)
                 {
-                    Console.WriteLine($"You have slain the {m.Name}!");
-                    turn = 1;
+                    Console.WriteLine($"You have slain the {m.Name}!");                   
                     mList.RemoveAt(0);
                     PressToContinue();
                 }
@@ -221,7 +219,7 @@ namespace ClubineTimothy_MonsterSlayer
                     if (fightLoop)
                     {
                         // create monster turn
-                        m.MonsterAttack(player, turn);
+                        m.MonsterAttack(player);
                         PressToContinue();
                         if (player.Health < 1)
                         {
@@ -232,8 +230,7 @@ namespace ClubineTimothy_MonsterSlayer
                             player.Health = 100;
 
                         }
-                        // resolve turn
-                        turn += 1;
+                        // resolve turn                        
                         if (!player.CanIBeAttacked)
                         {
                             player.Status();

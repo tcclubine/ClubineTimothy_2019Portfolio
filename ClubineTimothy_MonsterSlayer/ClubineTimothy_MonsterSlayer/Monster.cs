@@ -26,7 +26,7 @@ namespace ClubineTimothy_MonsterSlayer
             
         }
 
-        public void MonsterAttack(Hero player, int turn) {
+        public void MonsterAttack(Hero player) {
             int dmg = this.Attack - player.Armor;
 
             if (player.CanIBeAttacked)

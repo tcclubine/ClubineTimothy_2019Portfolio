@@ -1,12 +1,13 @@
-// Timothy Clubine
-// WDD229-O
-// Final Project
-// 12/18/2019
+/** Timothy Clubine
+    WDD229-O
+    Final Project
+    12/18/2019
+**/
 
 var player = null;
 var monsterList = null;
 var json = new JSON();
-monsterList = json.CreateMonsterList();
+monsterList = monsterList.json();
 
 var programLoop = true;
 do {
@@ -19,7 +20,6 @@ do {
         case "create hero":
         case "hero":
             player = CreateHero(player);
-            PressToContinue();
             break;
         case "c":
         case "change class":
@@ -27,7 +27,6 @@ do {
             if (PlayerNullCheck(player))
             {
                 player = ChooseClass(player, player.Name);
-                PressToContinue();
             }
             break;
         case "f":
@@ -41,8 +40,8 @@ do {
                 }
                 else
                 {
-                    Console.WriteLine("The monsters have respawned.");
-                    PressToContinue();
+                    console.log("The monsters have respawned.");
+
                     monsterList = json.CreateMonsterList();
                     monsterList = Fight(player, monsterList);
                 }
@@ -55,15 +54,15 @@ do {
             break;
         default:
             DefaultMenuMessage(input);
-            PressToContinue();
             break;
 
     }
 
 }while(programLoop);
 
+//Menus
 function FightMenu(){
-    let fMenu =
+    let fMenu = "------FIGHT!------\r\n"+
         "[a] Attack \r\n" +
         "[s] Use Skill \r\n" +
         "[r] Run Away \r\n" +
@@ -115,3 +114,196 @@ function Title(){
     alert(title);
 
 };
+
+//Utility
+function DefaultMenuMessage(input){
+    let msg = "\""+input +"\" is not a valid command.";
+    alert(msg);
+};
+
+/**
+ * @return {boolean}
+ */
+function PlayerNullCheck(p){
+    if (p === null)
+    {
+        alert("You must create a hero first.");
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+};
+
+/** Main Program Functions */
+function CreateHero(p){
+    let name = null;
+    do
+    {
+        if (p === null)
+        {
+
+            name = prompt("Enter a name for your Hero: ");
+            if (typeof name === 'undefined' || name == null)
+            {
+                alert("Do not leave blank. ");
+            }
+        }
+        else
+        {
+
+            Console.Write();
+            let input = prompt("Warning! This will override your current Hero.\r\n" +
+            "Proceed? (y/n)").toLowerCase();
+            switch (input)
+            {
+                case "y":
+                case "yes":
+                    p = null;
+                    break;
+                case "n":
+                case "no":
+                    return p;
+                default:
+                    break;
+            }
+        }
+
+    } while (typeof name === 'undefined' || name == null);
+
+
+
+    p = ChooseClass(p, name);
+
+
+    return p;
+};
+function ChooseClass(p, name){
+    do
+    {
+        ClassMenu();
+        let input = prompt(ClassMenu()).toLowerCase();
+
+        switch (input)
+        {
+            case "w":
+            case "warrior":
+                p = new Warrior(name);
+                return p;
+            case "a":
+            case "archer":
+                p = new Archer(name);
+                return p;
+            case "z":
+            case "wizard":
+                p = new Wizard(name);
+                return p;
+            default:
+                alert("\""+input+"\" is not an available class.");
+                break;
+        }
+
+    } while (true);
+};
+function Fight(player, mList){
+    let fightLoop = true;
+    let dmg = -1;
+    // turn counter
+    let turn = 1;
+    do
+    {
+        let m = mList[0];
+        let menuLoop = true;
+        do
+        {
+            menuLoop = false;
+            console.log(player.Name+"'s Health: "+player.Health);
+            // Declare monster to player
+            alert(m.Description);
+
+            // create player turn
+            let input = prompt(FightMenu()).toLowerCase();
+            switch (input)
+            {
+                case "a":
+                case "attack":
+                    dmg = player.Attack - m.Armor;
+                    if (dmg < 0)
+                    {
+                        alert("You do no damage. The "+m.Name+"'s armor is too strong.");
+
+                    }
+                    else
+                    {
+                        alert("You do "+dmg+" damage to the "+m.Name+".");
+                        m.Health -= dmg;
+                    }
+                    break;
+                case "s":
+                case "use skill":
+                case "skill":
+                    dmg = player.Skill() - m.Armor;
+                    alert("You do "+dmg+" damage to the "+m.Name+".");
+                    m.Health -= dmg;
+                    break;
+                case "r":
+                case "run away":
+                case "run":
+                    alert("You successfully ran away. The "+m.Name+" regains it's health while it waits for your return.");
+                    m.Health = 100;
+                    player.Health = 100;
+                    fightLoop = false;
+                    break;
+                default:
+                    menuLoop = true;
+                    DefaultMenuMessage(input);
+                    break;
+            }
+
+        } while (menuLoop);
+
+        if (m.Health < 1)
+        {
+            alert("You have slain the "+m.Name+"!");
+            turn = 1;
+            mList.pop();
+        }
+        else
+        {
+            if (fightLoop)
+            {
+                // create monster turn
+                m.MonsterAttack(player, turn);
+                if (player.Health < 1)
+                {
+                    alert("You have died.");
+                    fightLoop = false;
+                    m.Health = 100;
+                    player.Health = 100;
+
+                }
+                // resolve turn
+                turn += 1;
+                if (!player.CanIBeAttacked)
+                {
+                    player.Status();
+                }
+
+            }
+
+        }
+
+
+    } while (fightLoop && mList.length > 0);
+
+    if (mList.length < 1 && player.Health > 0)
+    {
+        alert("Congratulations! You have slain all of the monsters.");
+
+    }
+
+    return mList;
+};
+
+/** Classes */

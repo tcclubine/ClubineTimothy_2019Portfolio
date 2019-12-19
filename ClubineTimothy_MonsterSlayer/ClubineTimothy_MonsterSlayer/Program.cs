@@ -59,7 +59,7 @@ namespace ClubineTimothy_MonsterSlayer
                             }
                             else
                             {
-                                Console.WriteLine("The monsters have respawned");
+                                Console.WriteLine("The monsters have respawned.");
                                 PressToContinue();
                                 monsterList = json.CreateMonsterList();
                                 monsterList = Fight(player, monsterList);
@@ -92,58 +92,63 @@ namespace ClubineTimothy_MonsterSlayer
             do
             {
                 Monster m = mList[0];
-
-                Console.Clear();
-                Console.WriteLine($"{player.Name}'s Health: {player.Health}");
-                // Declare monster to player
-                Console.WriteLine(m.Description);
-                Console.WriteLine("------FIGHT!------");
-                FightMenu();
-
-                // create player turn
-                string input = Console.ReadLine().ToLower();
-                switch (input)
+                bool menuLoop = true;
+                do
                 {
-                    case "a":
-                    case "attack":
-                        dmg = player.Attack - m.Armor;
-                        if (dmg < 0)
-                        {
-                            Console.WriteLine($"You do no damage. The {m.Name}'s armor is too strong.");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"You do {dmg} damage to the {m.Name}.");
-                            PressToContinue();
-                            m.Health -= dmg;
-                        }
-                        PressToContinue();
-                        break;
-                    case "s":
-                    case "use skill":
-                    case "skill":
-                        dmg = player.Skill() - m.Armor;
-                        Console.WriteLine($"You did {dmg} damage to the {m.Name}.");
-                        m.Health -= dmg;
-                        PressToContinue();
-                        break;
-                    case "r":
-                    case "run away":
-                    case "run":
-                        Console.WriteLine($"You successfully ran away. The {m.Name} regains it's health while it waits for your return.");
-                        m.Health = 100;
-                        player.Health = 100;
-                        fightLoop = false;
-                        PressToContinue();
-                        break;
-                    default:
-                        DefaultMenuMessage(input);                        
-                        PressToContinue();
-                        break;
-                }
+                    menuLoop = false;
+                    Console.Clear();
+                    Console.WriteLine($"{player.Name}'s Health: {player.Health}");
+                    // Declare monster to player
+                    Console.WriteLine(m.Description);
+                    Console.WriteLine("------FIGHT!------");
+                    FightMenu();
 
-                
-                
+                    // create player turn
+                    string input = Console.ReadLine().ToLower();
+                    switch (input)
+                    {
+                        case "a":
+                        case "attack":
+                            dmg = player.Attack - m.Armor;
+                            if (dmg < 0)
+                            {
+                                Console.WriteLine($"You do no damage. The {m.Name}'s armor is too strong.");
+                                PressToContinue();
+                            }
+                            else
+                            {
+                                Console.WriteLine($"You do {dmg} damage to the {m.Name}.");
+                                PressToContinue();
+                                m.Health -= dmg;
+                            }
+                            
+                            break;
+                        case "s":
+                        case "use skill":
+                        case "skill":
+                            dmg = player.Skill() - m.Armor;
+                            Console.WriteLine($"You did {dmg} damage to the {m.Name}.");
+                            m.Health -= dmg;
+                            PressToContinue();
+                            break;
+                        case "r":
+                        case "run away":
+                        case "run":
+                            Console.WriteLine($"You successfully ran away. The {m.Name} regains it's health while it waits for your return.");
+                            m.Health = 100;
+                            player.Health = 100;
+                            fightLoop = false;
+                            PressToContinue();
+                            break;
+                        default:
+                            menuLoop = true;
+                            DefaultMenuMessage(input);
+                            PressToContinue();                            
+                            break;
+                    }
+
+                } while (menuLoop);
+
                 if (m.Health < 1)
                 {
                     Console.WriteLine($"You have slain the {m.Name}!");
@@ -157,9 +162,11 @@ namespace ClubineTimothy_MonsterSlayer
                     {
                         // create monster turn
                         m.MonsterAttack(player, turn);
+                        PressToContinue();
                         if (player.Health < 1)
                         {
                             Console.WriteLine("You have died.");
+                            PressToContinue();
                             fightLoop = false;
                             m.Health = 100;
                             player.Health = 100;
@@ -171,7 +178,7 @@ namespace ClubineTimothy_MonsterSlayer
                         {
                             player.Status();
                         }
-                        PressToContinue();
+                        
                     }
                     
                 }

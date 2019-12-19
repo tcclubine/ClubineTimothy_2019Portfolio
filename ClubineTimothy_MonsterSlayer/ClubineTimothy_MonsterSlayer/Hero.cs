@@ -9,7 +9,6 @@ namespace ClubineTimothy_MonsterSlayer
     abstract class Hero : IStatusChange
     {
         private string mName;
-        private List<Monster> mMonsterList;
         private string mClassType;
         private int mHealth;
         private int mAttack;

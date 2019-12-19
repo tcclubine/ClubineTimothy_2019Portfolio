@@ -82,9 +82,81 @@ namespace ClubineTimothy_MonsterSlayer
 
             Console.WriteLine("End of program.");
         }
+        public static Hero CreateHero(Hero p)
+        {
+            string name = null;
+            do
+            {
+                if (p == null)
+                {
+                    Console.Write("Enter a name for your Hero: ");
+                    name = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(name))
+                    {
+                        Console.WriteLine("Do not leave blank. ");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Warning! This will override your current Hero.");
+                    Console.Write("Proceed? (y/n): ");
+                    string input = Console.ReadLine().ToLower();
+                    switch (input)
+                    {
+                        case "y":
+                        case "yes":
+                            p = null;
+                            break;
+                        case "n":
+                        case "no":
+                            return p;
+                        default:
+                            break;
+                    }
+                }
+
+            } while (string.IsNullOrWhiteSpace(name));
+
+
+
+            p = ChooseClass(p, name);
+
+
+            return p;
+        }
+        public static Hero ChooseClass(Hero p, string name)
+        {
+
+            do
+            {
+                ClassMenu();
+                string input = Console.ReadLine().ToLower();
+
+                switch (input)
+                {
+                    case "w":
+                    case "warrior":
+                        p = new Warrior(name);
+                        return p;
+                    case "a":
+                    case "archer":
+                        p = new Archer(name);
+                        return p;
+                    case "z":
+                    case "wizard":
+                        p = new Wizard(name);
+                        return p;
+                    default:
+                        Console.WriteLine($"\"{input}\" is not an available class.");
+                        break;
+                }
+
+            } while (true);
+
+        }
         public static List<Monster> Fight(Hero player, List<Monster> mList)
         {
-            
+
             bool fightLoop = true;
             int dmg = -1;
             // turn counter
@@ -121,7 +193,7 @@ namespace ClubineTimothy_MonsterSlayer
                                 PressToContinue();
                                 m.Health -= dmg;
                             }
-                            
+
                             break;
                         case "s":
                         case "use skill":
@@ -143,7 +215,7 @@ namespace ClubineTimothy_MonsterSlayer
                         default:
                             menuLoop = true;
                             DefaultMenuMessage(input);
-                            PressToContinue();                            
+                            PressToContinue();
                             break;
                     }
 
@@ -170,7 +242,7 @@ namespace ClubineTimothy_MonsterSlayer
                             fightLoop = false;
                             m.Health = 100;
                             player.Health = 100;
-                            
+
                         }
                         // resolve turn
                         turn += 1;
@@ -178,11 +250,11 @@ namespace ClubineTimothy_MonsterSlayer
                         {
                             player.Status();
                         }
-                        
+
                     }
-                    
+
                 }
-                
+
 
             } while (fightLoop && mList.Count > 0);
 
@@ -191,10 +263,10 @@ namespace ClubineTimothy_MonsterSlayer
                 Console.WriteLine("Congratulations! You have slain all of the monsters.");
                 PressToContinue();
             }
-            
+
             return mList;
         }
-        
+
         public static void DefaultMenuMessage(string input)
         {
             Console.WriteLine($"\"{input}\" is not a valid command.");
@@ -215,78 +287,6 @@ namespace ClubineTimothy_MonsterSlayer
             {
                 return true;
             }            
-            
-        }
-        public static Hero CreateHero(Hero p)
-        {
-            string name = null;
-            do
-            {
-                if (p == null)
-                {
-                    Console.Write("Enter a name for your Hero: ");
-                    name = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(name))
-                    {
-                        Console.WriteLine("Do not leave blank. ");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Warning! This will override your current Hero.");
-                    Console.Write("Proceed? (y/n): ");
-                    string input = Console.ReadLine().ToLower();
-                    switch (input)
-                    {
-                        case "y":
-                        case "yes":
-                            p = null;
-                            break;
-                        case "n":
-                        case "no":
-                            return p;
-                        default:
-                            break;
-                    }
-                }
-                
-            } while (string.IsNullOrWhiteSpace(name));
-            
-            
-
-            p = ChooseClass(p,name);
-
-
-            return p;
-        }
-        public static Hero ChooseClass(Hero p, string name)
-        {
-            
-            do
-            {
-                ClassMenu();
-                string input = Console.ReadLine().ToLower();
-
-                switch (input)
-                {
-                    case "w":
-                    case "warrior":
-                        p = new Warrior(name);
-                        return p;
-                    case "a":
-                    case "archer":
-                        p = new Archer(name);
-                        return p;
-                    case "z":
-                    case "wizard":
-                        p = new Wizard(name);
-                        return p;
-                    default:
-                        Console.WriteLine($"\"{input}\" is not an available class.");
-                        break;
-                }
-
-            } while (true);
             
         }
 

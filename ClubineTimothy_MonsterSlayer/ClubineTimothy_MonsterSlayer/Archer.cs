@@ -16,7 +16,7 @@ namespace ClubineTimothy_MonsterSlayer
 
         public override int Skill()
         {
-            Console.WriteLine("You slip into the shadows evading the next attack.");
+            Console.WriteLine("You fire your bow and slip into the shadows evading the next attack.");
             this.Status();
             return this.Attack;
         }

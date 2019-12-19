@@ -70,7 +70,7 @@ function FightMenu(){
         "Choose an action: "
 
     return fmenu;
-};
+}
 function ClassMenu(){
     let menu ="-----------" +
     "   Class   " +
@@ -81,7 +81,7 @@ function ClassMenu(){
     "---------------\r\n" +
     "Choose a class: ";
     return menu;
-};
+}
 function MainMenu(p){
     let menuString = "";
     if (p != null)
@@ -99,7 +99,7 @@ function MainMenu(p){
         "Choose an option to continue: ";
 
     return menuString;
-};
+}
 function Title(){
     let title =
         " __  __                 _               _____ _                                     \r\n" +
@@ -113,13 +113,13 @@ function Title(){
         "__________________________________________________________________________          \r\n";
     alert(title);
 
-};
+}
 
 //Utility
 function DefaultMenuMessage(input){
     let msg = "\""+input +"\" is not a valid command.";
     alert(msg);
-};
+}
 
 /**
  * @return {boolean}
@@ -134,7 +134,7 @@ function PlayerNullCheck(p){
     {
         return true;
     }
-};
+}
 
 /** Main Program Functions */
 function CreateHero(p){
@@ -178,7 +178,7 @@ function CreateHero(p){
 
 
     return p;
-};
+}
 function ChooseClass(p, name){
     do
     {
@@ -205,7 +205,7 @@ function ChooseClass(p, name){
         }
 
     } while (true);
-};
+}
 function Fight(player, mList){
     let fightLoop = true;
     let dmg = -1;
@@ -294,7 +294,7 @@ function Fight(player, mList){
     }
 
     return mList;
-};
+}
 function DamageCalc(dmg,m){
     if (dmg < 1)
     {
@@ -307,6 +307,60 @@ function DamageCalc(dmg,m){
 
         m.Health -= dmg;
     }
-};
+}
 
 /** Classes */
+class Hero {
+    canIBeAttacked;
+    constructor(name,classType,health,attack,armor){
+        this.name = name;
+        this.classType = classType;
+        this.health = health;
+        this.attack = attack;
+        this.armor = armor;
+        this.canIBeAttacked = true;
+
+    };
+    Skill(){
+        let temp = -1;
+        alert("Error: This is the virtual Skill()");
+        return temp;
+    };
+    Status(){
+        this.canIBeAttacked = !this.canIBeAttacked;
+    };
+}
+class Wizard extends Hero{
+    constructor(name){
+        super(name,"Wizard", 100, 5, 0);
+    };
+    Skill(){
+        super.Skill();
+        let skillAttack = 100;
+        alert("You cast Fireball at the monster.");
+        return skillAttack;
+    };
+}
+class Archer extends Hero{
+    constructor(name){
+        super(name, "Archer", 100,15,5);
+    };
+    Skill(){
+        super.Skill();
+        alert("You fire your bow and slip into the shadows evading the next attack.");
+        this.Status();
+        return this.attack;
+    };
+}
+class Warrior extends Hero{
+    constructor(name){
+        super(name, "Warrior", 100,10,10);
+    };
+    Skill(){
+        super.Skill();
+        alert("You bolster you attack and defense.");
+        this.attack += 10;
+        this.armor += 10;
+        return this.attack;
+    };
+}

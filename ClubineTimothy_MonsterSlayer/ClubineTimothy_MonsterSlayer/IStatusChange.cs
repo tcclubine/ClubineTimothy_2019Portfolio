@@ -9,9 +9,7 @@ namespace ClubineTimothy_MonsterSlayer
     interface IStatusChange
     {
 
+
         void Status();
-
-        
-
     }
 }

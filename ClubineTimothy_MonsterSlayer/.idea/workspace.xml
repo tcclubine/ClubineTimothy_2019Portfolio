@@ -2,17 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14e6181d-0138-4fdc-97ac-2b4801ccf938" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../A7OOP/.idea/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../A7OOP/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ClubineTimothy_dbsreview.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ClubineTimothy_jsPractice.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ClubineTimothy_json.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ClubineTimothy_oop.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsonDEMO.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsonDEMO/.idea/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsonDEMO/.idea/scopes/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsonDEMO/JS/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsonDEMO/desktop.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A7OOP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../A7OOP/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ClubineTimothy_MonsterSlayer/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/Monster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/IStatusChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/IStatusChange.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/bin/Debug/ClubineTimothy_MonsterSlayer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/bin/Debug/ClubineTimothy_MonsterSlayer.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/bin/Debug/ClubineTimothy_MonsterSlayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/bin/Debug/ClubineTimothy_MonsterSlayer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/obj/Debug/ClubineTimothy_MonsterSlayer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsonDEMO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jsonDEMO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wk2_debug_buggySearch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../wk2_debug_buggySearch/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,42 +43,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/index.html">
+        <entry file="file://$PROJECT_DIR$/JS/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+            <state relative-caret-position="136">
+              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/main.js">
+        <entry file="file://$PROJECT_DIR$/JS/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-              <folding>
-                <element signature="n#Hero#0" />
-                <element signature="n#Wizard#0" />
-                <element signature="n#Archer#0" />
-                <element signature="n#Warrior#0" />
-                <element signature="n#!!block;n#FightMenu#0" />
-                <element signature="n#!!block;n#ClassMenu#0" />
-                <element signature="n#!!block;n#MainMenu#0" />
-                <element signature="n#!!block;n#Title#0" />
-                <element signature="n#!!block;n#DefaultMenuMessage#0" />
-                <element signature="n#!!block;n#PlayerNullCheck#0" />
-                <element signature="n#!!block;n#CreateHero#0" />
-                <element signature="n#!!block;n#ChooseClass#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/MonsterList.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="-4369">
+              <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -102,13 +96,15 @@
         <option value="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/MonsterList.json" />
         <option value="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/index.html" />
         <option value="$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/main.js" />
+        <option value="$PROJECT_DIR$/JS/index.html" />
+        <option value="$PROJECT_DIR$/JS/main.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1712" />
-    <option name="width" value="1724" />
-    <option name="height" value="1398" />
+    <option name="x" value="-8" />
+    <option name="width" value="1737" />
+    <option name="height" value="1448" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -128,12 +124,6 @@
             </path>
             <path>
               <item name="ClubineTimothy_MonsterSlayer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClubineTimothy_MonsterSlayer" type="462c0819:PsiDirectoryNode" />
-              <item name="ClubineTimothy_MonsterSlayer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClubineTimothy_MonsterSlayer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClubineTimothy_MonsterSlayer" type="462c0819:PsiDirectoryNode" />
               <item name="ClubineTimothy_MonsterSlayer" type="462c0819:PsiDirectoryNode" />
               <item name="JS" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -175,17 +165,18 @@
       <updated>1576660417126</updated>
       <workItem from="1576660418208" duration="614000" />
       <workItem from="1576724249686" duration="26609000" />
+      <workItem from="1576864830038" duration="1920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27223000" />
+    <option name="totallyTimeSpent" value="29143000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1370" y="0" width="1379" height="1118" extended-state="0" />
+    <frame x="-6" y="0" width="1389" height="1158" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25186288" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -228,13 +219,7 @@
     <entry file="file://$PROJECT_DIR$/../ClubineTimothy_json/jsonDEMO/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/MonsterList.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/MonsterList.json" />
     <entry file="file://$PROJECT_DIR$/ClubineTimothy_MonsterSlayer/JS/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -260,6 +245,20 @@
             <element signature="n#!!block;n#CreateHero#0" />
             <element signature="n#!!block;n#ChooseClass#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4369">
+          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
         </state>
       </provider>
     </entry>

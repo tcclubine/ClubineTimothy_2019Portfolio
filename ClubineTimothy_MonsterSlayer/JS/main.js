@@ -41,7 +41,6 @@ class Archer extends Hero{
         super(name, "Archer", 100,15,5);
     };
     Skill(){
-        super.Skill();
         alert("You fire your bow and slip into the shadows evading the next attack.");
         this.Status();
         return this.attack;
@@ -52,7 +51,6 @@ class Warrior extends Hero{
         super(name, "Warrior", 100,10,10);
     };
     Skill(){
-        super.Skill();
         alert("You bolster you attack and defense.");
         this.attack += 10;
         this.armor += 10;
